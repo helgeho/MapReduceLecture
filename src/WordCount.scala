@@ -7,7 +7,7 @@ object WordCount {
     // map
     val mapped = lines.map{ line =>
       for (word <- line.split("[\\W]+"))
-        yield (word, 1)
+        yield (word.toLowerCase(), 1)
     }
 
     // shuffle
