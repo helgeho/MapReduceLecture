@@ -11,7 +11,7 @@ object WordCount {
     }
 
     // shuffle
-    val shuffled = mapped.flatMap(words => words).groupBy{case (key, value) => key}
+    val shuffled = mapped.flatten.groupBy{case (key, value) => key}
     println(shuffled)
 
     // reduce
